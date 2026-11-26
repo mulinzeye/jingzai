@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xiaolv — Daily Focus Widget for Windows</title>
+<meta name="description" content="A small always-on-top desktop widget that gives you three doable tasks a day, with a spoken alarm and tick-box follow-through.">
+<style>
+  :root{
+    --ink:#111827; --muted:#4b5563; --line:#e5e7eb;
+    --brand:#2f6f5e; --brand-soft:#eaf3ef; --gold:#c08a2e; --bg:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{padding:56px 0 32px}
+  .eyebrow{display:inline-block;background:var(--brand-soft);color:var(--brand);
+           font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;letter-spacing:.02em}
+  h1{font-size:40px;line-height:1.25;margin:18px 0 12px;letter-spacing:-.02em}
+  h1 span{color:var(--brand)}
+  .sub{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 26px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
+       font-weight:600;padding:13px 26px;border-radius:10px;border:1px solid var(--brand)}
+  .btn.ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+  .note{font-size:13px;color:var(--muted)}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-size:24px;margin:0 0 18px;letter-spacing:-.01em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:17px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  ul.clean{list-style:none;padding:0;margin:0}
+  ul.clean li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  ul.clean li:last-child{border:0}
+  ul.clean li b{color:var(--ink)}
+  .shot{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fafafa}
+  .shot img{display:block;width:100%;height:auto}
+  .two{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+  @media(max-width:780px){.two{grid-template-columns:1fr}h1{font-size:31px}}
+  .price{display:flex;align-items:baseline;gap:10px;margin:0 0 6px}
+  .price b{font-size:34px;letter-spacing:-.02em}
+  .price s{color:#9ca3af}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  th{width:38%;color:var(--muted);font-weight:500}
+  details{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:600}
+  details p{margin:10px 0 0;color:var(--muted);font-size:15px}
+  footer{padding:34px 0 60px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  code{background:#f3f4f6;padding:2px 6px;border-radius:5px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Windows desktop app · one-time purchase</span>
+    <h1>Three doable things a day,<br><span>and an alarm that says them out loud.</span></h1>
+    <p class="sub">
+      Xiaolv is a small widget that sits in the corner of your desktop. It gives you three tasks
+      you can actually finish today, rings a spoken alarm when it is time, and ticks them off
+      when you are done. No account, no cloud, nothing leaves your PC.
+    </p>
+    <div class="cta">
+      <a class="btn" href="#buy">Buy for $19</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+      <span class="note">Windows 10 / 11 · portable .exe · no installer</span>
+    </div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap two">
+    <div>
+      <h2>What it actually does</h2>
+      <ul class="clean">
+        <li><b>Three tasks, not a to-do list.</b> The number of tasks shrinks if you tell it you only have two hours today.</li>
+        <li><b>Spoken alarm.</b> A voice says the time and the task, and keeps ringing until you press Done or Snooze 10 min.</li>
+        <li><b>Tick boxes and a monthly grid.</b> You can see at a glance how many days you actually followed through.</li>
+        <li><b>Private by default.</b> All data lives in a folder next to the .exe. No sign-up, no telemetry, no server.</li>
+        <li><b>One-click hide.</b> Shrinks to a dot in the corner; click it to bring the panel back.</li>
+      </ul>
+    </div>
+    <div class="shot">
+      <img src="img/panel.png" alt="Xiaolv panel screenshot">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who it is for</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Freelancers</h3>
+        <p>You know you have work, you just keep opening tabs. Three tasks with a deadline voice beat a list of forty.</p>
+      </div>
+      <div class="card">
+        <h3>Students</h3>
+        <p>Study blocks with a spoken reminder are easier to keep than a calendar you never look at.</p>
+      </div>
+      <div class="card">
+        <h3>Anyone selling their time</h3>
+        <p>If you bill by the hour, the monthly grid shows you which days you actually shipped.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap two">
+    <div>
+      <h2>Buy</h2>
+      <p class="price"><b>$19</b> <s>$29</s> <span class="note">launch price</span></p>
+      <p class="note" style="margin-top:0">One-time payment. Includes one year of minor updates.</p>
+      <p style="margin:22px 0 8px"><a class="btn" id="buy-link" href="#buy">Get Xiaolv for Windows</a></p>
+      <p class="note">Card, Apple Pay and Google Pay. Checkout handled by our payment partner; VAT/sales tax included where applicable.</p>
+    </div>
+    <div>
+      <table>
+        <tr><th>Platform</th><td>Windows 10 / 11 (64-bit)</td></tr>
+        <tr><th>Delivery</th><td>Instant download after payment</td></tr>
+        <tr><th>Files</th><td>Portable .exe (~19 MB) + user guide (中文 / English)</td></tr>
+        <tr><th>Updates</th><td>In-app notice + one-click update script</td></tr>
+        <tr><th>Data</th><td>Stored locally next to the .exe; never uploaded</td></tr>
+        <tr><th>Refunds</th><td>Full refund within 24 hours, no questions asked</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details>
+      <summary>Is this a subscription?</summary>
+      <p>No. You pay once. Minor version updates are included for a year; after that the app keeps working exactly as it is.</p>
+    </details>
+    <details>
+      <summary>Does it need an internet connection?</summary>
+      <p>No. It runs fully offline. The only network call is an optional version check you can ignore.</p>
+    </details>
+    <details>
+      <summary>Will it work on macOS?</summary>
+      <p>Not yet. This build is Windows-only.</p>
+    </details>
+    <details>
+      <summary>Where is my data stored?</summary>
+      <p>In a <code>data</code> folder next to the executable: reminders, check-ins and notes. Delete the folder and everything is gone.</p>
+    </details>
+    <details>
+      <summary>What if it does not run?</summary>
+      <p>Right-click the .exe, open Properties, tick "Unblock", then run it again. If it still fails, email us and you get a refund.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Xiaolv — a small desktop focus widget. Sold by an independent developer.
+    Support: <a href="mailto:652288v@gmail.com">652288v@gmail.com</a> · We reply within 3 business days.</p>
+    <p>No predictions, no fortune telling, no medical or financial advice. This is a scheduling and reminder tool.</p>
+  </div>
+</footer>
+
+</body>
+</html>
